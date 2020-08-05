@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="resources/static/style.css">
+    <title>Hi</title>
+</head>
+<body>
+<h3>Hello there mate!</h3>
+<p>Cool stuff isn't it?</p>
+
+<table >
+    <tr>
+        <th>
+            id
+        </th>
+        <th>
+            name
+        </th>
+        <th>
+            last name
+        </th>
+    </tr>
+    <tr th:each="list : ${list}">
+        <td th:text="${list.getId()}"></td>
+        <td th:text="${list.getName()}"></td>
+        <td th:text="${list.getLastName()}"></td>
+    </tr>
+</table>
+</body>
+</html>
